@@ -1,0 +1,44 @@
+.statusDates{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 100%;
+    align-items: flex-end;
+    font-family: "Noto Sans", sans-serif;
+    row-gap: 5px;
+    font-size: 16px;
+}
+.statusInformation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 5px;
+    margin-top: 20px;
+}
+.statusInformation h2{
+    font-size: 37px;
+    font-weight: 800;
+    font-family: "Lato", sans-serif;
+}
+.statusInformation p{
+    font-size: 20px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+
+@media(max-width: 500px){
+    nav a{
+        font-size: 14px;
+    }
+    .statusDates{
+        font-size: 14px;
+    }
+    .statusInformation h2{
+        font-size: 30px;
+    }
+    .statusInformation p{
+        font-size: 16px;
+    }
+    
+}

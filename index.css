@@ -9,8 +9,18 @@ nav{
     padding: 30px 12%;
     display: flex;
     padding-top: 40px;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    row-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    color: #032c62;
+    text-wrap: nowrap;
+    font-size: 16px;
+}
+button{
+    cursor: pointer;
 }
 nav .heading{
     display: flex;
