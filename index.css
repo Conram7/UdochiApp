@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    font-family: "Noto Sans", sans-serif;
+    padding: 30px 12%;
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+nav .heading{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+}
+nav .heading img{
+    width: 65px;
+    margin-top: 4px;
+    height: 30px;
+}
+nav .heading p{
+    font-size:15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+}
+hr{
+    height: 4px;
+    background-color: black;
+    width: 100%;
+}
+.signIn{
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    padding: 30px 12%;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 20px;
+    font-size: 16px;
+}
+.signIn span{
+    margin-top: 3px;
+}
+.signInForm{
+    padding: 0px 12%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 19px;
+}
+.signHeading{
+    font-family: "Lato", sans-serif ;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(185, 1, 1);
+}
+form{
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+form .inputWrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+form label{
+    font-weight: 700;
+}
+form label span{
+    color: rgb(181, 0, 0);
+}
+form input{
+    font-size: 19px;
+    padding: 20px 10px;
+    border-radius: 5px;
+    width: 550px;
+    outline: none;
+    border-width: 1px;
+}
+form input:focus{
+    border: 2px solid #335075;
+    box-shadow: 0px 0px 10px rgb(217, 217, 255);
+}
+
+form button{
+    color: white;
+    padding: 13px 16px;
+    width: fit-content;
+    background-color: gray;
+    border: 0px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.signInForm a{
+    font-family: "Noto Sans", sans-serif;
+    color: #335075;
+    margin-top: 10px;
+}
+.signInForm .pageDate{
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.reportButton{
+    margin-top: 30px;
+    width: fit-content;
+    padding: 10px 16px;
+    font-family: "Lato", sans-serif ;
+    color: #032c62;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: #eaebed;
+    font-weight: 500;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.banner{
+    margin-top: 60px;
+    width: 100%;
+    height: 75px;
+    background-color: #26374a;
+}
+footer{
+    padding: 20px 12%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    justify-content: space-between;
+}
+.leftFooter{
+    flex-wrap: wrap;
+    row-gap: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.leftFooter a{
+    text-decoration: none;
+    color: #032c62;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.leftFooter .circle{
+    width: 4px;
+    margin-top: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: black;
+}
+.rightFooter img{
+    width: auto;
+    height: 45px;
+    /* max-width: 20%; */
+}
+
+@media(max-width: 1000px){
+    nav{
+        padding: 30px 5%;
+        padding-top: 40px;
+    }
+    .signIn{
+        padding: 30px 5%;
+    }
+    .signInForm{
+        padding: 0px 5%;
+    }
+    footer{
+        padding: 20px 5%;
+    }
+    form input{
+        width: 400px;
+    }
+}
+@media(max-width: 500px){
+    form input{
+        width: 100%;
+    }
+    .signHeading h1{
+        font-size: 30px;
+    }
+}
