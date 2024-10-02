@@ -1,106 +1,26 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <nav>
-        <div class="heading">
-            <div class="logo">
-                <img src="WhatsApp Image 2024-09-27 at 21.49.14_9860f3ce.jpg" alt="">
-            </div>
-            <p>Government <br> of Canada</p>
-            <p>Gouvernement <br> du Canada</p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="loginContainer">
+      <h1>Sign In</h1>
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
 
-    </nav>
-    <hr>
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
 
-    <div class="signIn">
-        <a href="">Home</a>
-        <span>></span>
-        <p>Sign in</p>
+        <button type="submit">Sign In</button>
+      </form>
     </div>
 
-    <div class="signInForm">
-        <div class="signHeading">
-            <h1>Sign in to the IRCC portal</h1>
-        </div>
-        <form onsubmit="validateForm(event)">
-            <p id="errorMessage" style="color: red;"></p>
-            <div class="inputWrapper">
-                <label for="email">
-                    <span>*</span>
-                    Email address
-                    <span>(required)</span>
-                </label>
-                <input type="text" id="email" required>
-            </div>
-            
-            <div class="inputWrapper">
-                <label for="password">
-                    <span>*</span>
-                    Password
-                    <span>(required)</span>
-                </label>
-                <input type="password" id="password" required>
-            </div>
-            <button type="submit">Sign in</button>
-        </form>
-
-        <!-- Error message -->
-        <a href="">Forogot your password?</a>
-
-        <span class="pageDate">
-            <small>Date modified: 2024-06-19</small>
-            <small>e8ea035a3</small>
-        </span>
-
-        <button class="reportButton">Report a problem on this page</button>
-    </div>
-
-    <div class="banner"></div>
-
-    <footer>
-        <div class="leftFooter">
-            <a href="">Contact Information</a>
-            <span class="circle"></span>
-            <a href="">Terms and conditions</a>
-            <span class="circle"></span>
-            <a href="">Privacy</a>
-        </div>
-        <div class="rightFooter">
-            <img src="WhatsApp Image 2024-09-27 at 20.50.46_9c4fa8ef.jpg" alt="">
-        </div>
-    </footer>
-
-
-    <script>
-        function validateForm(event) {
-            event.preventDefault(); // Prevent form submission
-
-            // Get the input values
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-
-            // Predefined email and password
-            const correctEmail = "muhammadmajid097@gmail.com";
-            const correctPassword = "Majid@Password100";
-
-            // Check if the input matches the predefined values
-            if (email === correctEmail && password === correctPassword) {
-                // Redirect to another page if email and password match
-                window.location.href = "appstatus.html";
-            } else {
-                // Show error message if email or password is incorrect
-                document.getElementById("errorMessage").innerText = "Invalid email or password!";
-            }
-        }
-    </script>
-
-    
-</body>
+    <script src="login.js"></script>
+  </body>
 </html>
