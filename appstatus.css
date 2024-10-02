@@ -49,7 +49,7 @@
     padding: 2px 15px;
     border-radius: 25px;
     font-weight: 600;
-    color: #032c62;
+    color: red; /* Change the text color to red */
     background-color: #032c6239;
 }
 .statusData{
