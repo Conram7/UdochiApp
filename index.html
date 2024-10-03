@@ -79,27 +79,40 @@
 
 
     <script>
-        function validateForm(event) {
-            event.preventDefault(); // Prevent form submission
+    function validateForm(event) {
+        event.preventDefault(); // Prevent form submission
 
-            // Get the input values
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+        // Get the input values
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
-            // Predefined email and password
-            const correctEmail = "muhammadmajid097@gmail.com";
-            const correctPassword = "Majid@Password100";
-
-            // Check if the input matches the predefined values
-            if (email === correctEmail && password === correctPassword) {
-                // Redirect to another page if email and password match
-                window.location.href = "appstatus.html";
-            } else {
-                // Show error message if email or password is incorrect
-                document.getElementById("errorMessage").innerText = "Invalid email or password!";
+        // Predefined email and password for two users
+        const users = [
+            {
+                email: "muhammadmajid097@gmail.com",
+                password: "Majid@Password100",
+                redirectPage: "appstatus.html"
+            },
+            {
+                email: "anummajid907@gmail.com",
+                password: "Anum@Password200",
+                redirectPage: "appstatusanum.html"
             }
+        ];
+
+        // Check if the input matches any predefined user credentials
+        const user = users.find(user => user.email === email && user.password === password);
+
+        if (user) {
+            // Redirect to the corresponding page if credentials match
+            window.location.href = user.redirectPage;
+        } else {
+            // Show error message if email or password is incorrect
+            document.getElementById("errorMessage").innerText = "Invalid email or password!";
         }
-    </script>
+    }
+</script>
+
 
     
 </body>
