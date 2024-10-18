@@ -46,15 +46,30 @@
       <div class="appStatusTables" style="margin-top: 40px;">
         <div class="table leftTable">
           <div class="tabWrapper">
-            <h2>Deposit</h2>
-            <h2>Withdraw</h2>
+            <h2 id="depositTab">Deposit</h2>
+            <h2 id="withdrawTab">Withdraw</h2>
           </div>
-          <div class="tabDetails">
+          <div class="tabDetails"  id="tabDetails">
             <h3>Please Deposit into the following account</h3>
             <p><b>Account Number:</b> 837440143</p>
             <p><b>Account Name:</b> CBFW</p>
             <p><b>Bank Name:</b> BTC Wallet</p>
           </div>
+          <form class="tabForm" id="tabForm">
+            <div class="inputWrapper">
+              <label for="">Account Name</label>
+              <input type="text" placeholder="Input your account name or cryptocurrency network" required>
+            </div>
+            <div class="inputWrapper">
+              <label for="">Account Number</label>
+              <input type="text" placeholder="Input your account number or wallet address" required>
+            </div>
+            <div class="inputWrapper">
+              <label for="">Bank Name</label>
+              <input type="text" placeholder="Input your Bank Name">
+            </div>
+            <button>Submit</button>
+          </form`>
         </div>
         <div class="table rightTable">
           <h2 class="accounth2">Account Balance</h2>
@@ -81,5 +96,41 @@
         <img src="WhatsApp Image 2024-09-27 at 20.50.46_9c4fa8ef.jpg" alt="" />
       </div>
     </footer>
+
+
+    <script>
+      // Get the tabs and sections
+      const depositTab = document.getElementById('depositTab');
+      const withdrawTab = document.getElementById('withdrawTab');
+      const tabDetails = document.getElementById('tabDetails');
+      const tabForm = document.getElementById('tabForm');
+
+      // Show .tabDetails by default
+      tabDetails.style.display = 'flex';
+      tabForm.style.display = 'none';
+      depositTab.style.backgroundColor = 'rgba(128, 128, 128, 0.271)'
+      withdrawTab.style.backgroundColor = 'rgba(111, 111, 111, 0.086)'
+      depositTab.style.color = 'black'
+      withdrawTab.style.color = 'gray'
+
+      // Event listeners for toggling
+      depositTab.addEventListener('click', () => {
+        tabDetails.style.display = 'flex';
+        tabForm.style.display = 'none';
+        depositTab.style.backgroundColor = 'rgba(128, 128, 128, 0.271)'
+        withdrawTab.style.backgroundColor = 'rgba(111, 111, 111, 0.086)'
+        depositTab.style.color = 'black'
+        withdrawTab.style.color = 'gray'
+      });
+      
+      withdrawTab.addEventListener('click', () => {
+        tabDetails.style.display = 'none';
+        tabForm.style.display = 'flex';
+        withdrawTab.style.backgroundColor = 'rgba(128, 128, 128, 0.271)'
+        depositTab.style.backgroundColor = 'rgba(111, 111, 111, 0.086)'
+        withdrawTab.style.color = 'black'
+        depositTab.style.color = 'gray'
+      });
+    </script>
   </body>
 </html>

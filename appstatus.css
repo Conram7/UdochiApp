@@ -194,6 +194,31 @@
     list-style-type: circle;
 }
 
+.tabForm{
+    padding: 0px 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    display: none;
+}
+.tabForm input{
+    padding: 10px 15px;
+    width: 100% !important;
+    border: 1px solid rgb(182, 182, 182);
+    font-size: 14px;
+}
+.tabForm .inputWrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+.tabForm label{
+    font-size: 15px;
+}
+.tabForm button{
+    padding: 10px 20px;
+}
+
 
 
 @media(max-width: 1000px){
@@ -206,6 +231,7 @@
     }
 }
 @media(max-width: 500px){
+    
     nav a{
         font-size: 14px;
     }
@@ -241,5 +267,14 @@
     }
     .applicationInfo li{
         font-size: 15px;
+    }
+    .tabDetails2 h3{
+        font-size: 30px;
+    }
+    .tabWrapper h2{
+        font-size: 18px;
+    }
+    .accounth2{
+        font-size: 18px !important;
     }
 }
