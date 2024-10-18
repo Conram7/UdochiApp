@@ -127,6 +127,52 @@
     font-family: "Lato", sans-serif;
     font-weight: 700;
 }
+.tabWrapper{
+    display: flex;
+    width: 100%;
+}
+.tabWrapper h2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: gray;
+    justify-content: center;
+    background-color: rgba(111, 111, 111, 0.086);
+    border: 1px solid rgba(128, 128, 128, 0.222);
+    font-size: 22px;
+}
+.tabWrapper h2:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.271);
+    transition: 300ms;
+    color: black;
+}
+.accounth2{
+    font-size: 22px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.084);;
+}
+.tabDetails{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.tabDetails2{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.tabDetails2 p{
+    font-size: 15px;
+}
+.tabDetails2 h3{
+    font-size: 40px;
+}
+.tabDetails p{
+    font-size: 16px;
+}
 .applicationDetails p{
     font-size: 18px;
     line-height: 27px;
