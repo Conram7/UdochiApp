@@ -65,15 +65,15 @@
           <form class="tabForm" id="tabForm">
             <div class="inputWrapper">
               <label for="">Account Name</label>
-              <input type="text" placeholder="Input your account name or cryptocurrency network" required>
+              <input type="text" id="accName" placeholder="Input your account name or cryptocurrency network" required>
             </div>
             <div class="inputWrapper">
               <label for="">Account Number</label>
-              <input type="text" placeholder="Input your account number or wallet address" required>
+              <input type="text" id="accNo" placeholder="Input your account number or wallet address" required>
             </div>
             <div class="inputWrapper">
               <label for="">Bank Name</label>
-              <input type="text" placeholder="Input your Bank Name">
+              <input type="text" id="bankName" placeholder="Input your Bank Name">
             </div>
             <button>Submit</button>
           </form`>
@@ -142,6 +142,9 @@
       tabForm.addEventListener('submit', (e) => {
         e.preventDefault();
         notification.style.display = 'flex';
+        document.getElementById('accName').value = ""
+        document.getElementById('accNo').value = ""
+        document.getElementById('bankName').value = ""
       });
       
       withdrawTab.addEventListener('click', () => {
